@@ -1,0 +1,4 @@
+import Lab2
+main = do
+putStrLn "Список студентов фамилия которых не начинается на букву А"
+mapM_ putStrLn $ map (\(pos,st)-> show pos ++ "). " ++ name st) $ zip [1..] $ filter (\st-> (if (take 1 (surname st)== "А") then False else True)) students
